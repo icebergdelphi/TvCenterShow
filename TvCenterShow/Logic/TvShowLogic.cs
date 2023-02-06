@@ -63,20 +63,12 @@ namespace TvCenterShow.Logic
         {
             var result = string.Empty;
             StringBuilder stringBuilder = new StringBuilder();
-            if (inPutParam == "favorites")
-            {
-                foreach (var showOrderItem in TvShowList.Where(x => x.IsFavorite == true).OrderBy(x => x.Show))
-                {
-                    stringBuilder.AppendLine($"{showOrderItem.Id}   {showOrderItem.Show}   {GlobalHelper.setBoolToString(showOrderItem.IsFavorite)}");
-                    result = stringBuilder.ToString();
-                }
-            }
-            else
-            {
-
-                result = "Bad Parameter, Please for this option type the Param:'favorites, remember the app is not accepting Capitalized Parameter";
-            }
-            return result;
+           foreach (var showOrderItem in TvShowList.Where(x => x.IsFavorite == true).OrderBy(x => x.Show))
+           {
+                stringBuilder.AppendLine($"{showOrderItem.Id}   {showOrderItem.Show}   {GlobalHelper.setBoolToString(showOrderItem.IsFavorite)}");
+                result = stringBuilder.ToString();
+           }           
+           return result;
         }
     }
 }

@@ -41,11 +41,20 @@ while (input != "exit")
 
         }
         else if (input == "favorites")
-        {        
-          
-            Console.WriteLine("The Tv Show Favorite List:");
+        {
+            
+           
             var result = TvShowLogic.FindTvShowByFavorites(input);
-            Console.WriteLine(result);
+            if (!string.IsNullOrEmpty(result))
+            {
+                Console.WriteLine("The Tv Show Favorite List:");
+                Console.WriteLine(result);
+            }
+            else
+            {
+                Console.WriteLine("There are not a Tv Show Favorite item yet");
+            }
+           
         }
         else
         {
