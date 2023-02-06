@@ -42,9 +42,7 @@ while (input != "exit")
         }
         else if (input == "favorites")
         {
-            
-           
-            var result = TvShowLogic.FindTvShowByFavorites(input);
+            var result = TvShowLogic.FindTvShowByFavorites();
             if (!string.IsNullOrEmpty(result))
             {
                 Console.WriteLine("The Tv Show Favorite List:");

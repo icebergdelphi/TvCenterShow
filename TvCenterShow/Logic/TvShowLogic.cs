@@ -56,10 +56,9 @@ namespace TvCenterShow.Logic
 
         /// <summary>
         /// Show all the List of the favorites TV show typing "favorites" as Parameter
-        /// </summary>
-        /// <param name="inPutParam"></param>
+        /// </summary>        
         /// <returns></returns>
-        public static string FindTvShowByFavorites(string inPutParam)
+        public static string FindTvShowByFavorites()
         {
             var result = string.Empty;
             StringBuilder stringBuilder = new StringBuilder();

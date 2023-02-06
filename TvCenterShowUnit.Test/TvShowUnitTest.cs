@@ -61,7 +61,7 @@ namespace TvCenterShowUnit.Test
             if (inputParam == "list")
             {
 
-                result = TvShowLogic.FindTvShowByFavorites(inputParam);
+                result = TvShowLogic.FindTvShowByFavorites();
                 //Assert
                 Assert.NotEqual(result, resultMessage);
 
