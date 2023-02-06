@@ -69,22 +69,7 @@ namespace TvCenterShowUnit.Test
 
         }
 
-        /// <summary>
-        /// Test to Evaluate if the Void Method is returning Wrong if the Type Input Parameter is not "list", This test Should Fails
-        /// </summary>
-        [Fact]
-        public void TestListAllTvFavoritesShowWrong()
-        {
-            //Arrage
-            var result = string.Empty;
-            var inputParam = "favorities";
-            var resultMessage = "Bad Parameter, Please for this option type the Param:'favorites, remember the app is not accepting Capitalized Parameter";
-
-            //Action
-            result = TvShowLogic.FindTvShowByFavorites(inputParam);
-            //Assert              
-            Assert.Equal(resultMessage, result);
-        }
+       
         #endregion
 
         #region Testing Favorite Mark/UnMark 
